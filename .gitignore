@@ -1,0 +1,7 @@
+*.*~
+*.bak
+node_modules/
+logs/
+build/
+dist/
+package-lock.json
