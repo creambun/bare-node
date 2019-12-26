@@ -1,0 +1,15 @@
+{
+  "rules": {
+    "eofline": false,
+    "quotemark": [
+      true,
+      "single"
+    ]
+  },
+  "extends": "gts/tslint.json",
+  "linterOptions": {
+    "exclude": [
+      "**/*.json"
+    ]
+  }
+}
