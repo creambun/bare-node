@@ -1,0 +1,187 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "{Your project title}",
+        "description": "{Your project description}",
+        "version": "{Your project version}",
+        "termsOfService": "{Your terms of service}",
+        "contact": {
+            "name": "{Your contact name}",
+            "url": "http://your.url/",
+            "email": "your@email.com"
+        },
+        "license": {
+            "name": "{Your license}",
+            "url": "http://license.url/"
+        }
+    },
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "Persons",
+            "description": "API for persons in the system"
+        }
+    ],
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/persons": {
+            "get": {
+                "tags": [
+                    "Persons"
+                ],
+                "summary": "Get all persons in system",
+                "responses": {
+                    "200": {
+                        "description":  "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Persons"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Persons"
+                ],
+                "summary": "Create a new person into the system",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Person that we want to create",
+                        "schema": {
+                            "$ref": "#/definitions/Person"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created",
+                        "schema": {
+                            "properties": {
+                                "id": {
+                                    "$ref": "#/definitions/Id"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Failed. Bad post data"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                }
+            }
+        },
+        "/persons/{id}": {
+            "parameters": [
+                {
+                    "in": "path",
+                    "name": "id",
+                    "description": "Person ID",
+                    "required": true,
+                    "type": "string"
+                }
+            ],
+            "get": {
+                "tags": [
+                    "Persons"
+                ],
+                "summary": "Get an existing person by Id in the system",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Person"
+                        }
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Persons"
+                ],
+                "summary": "Update an existing person by Id in the system",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "required": true,
+                        "description": "Person that we want to update",
+                        "schema": {
+                            "$ref": "#/definitions/Person"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/Person"
+                        }
+                    },
+                    "400": {
+                        "description": "Failed. Bad data"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Persons"
+                ],
+                "summary": "Delete an existing person by Id from the system",
+                "responses": {
+                    "204": {
+                        "description": "No content"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Id": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+        },
+        "Person": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "$ref": "#/definitions/Id"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "Persons": {
+            "type": "object",
+            "properties": {
+                "persons": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Person"
+                    }
+                }
+            }
+        }
+    }
+}
