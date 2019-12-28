@@ -5,7 +5,8 @@
       true,
       "single"
     ],
-    "no-default-export": false
+    "no-default-export": false,
+    "no-any": false
   },
   "extends": "gts/tslint.json",
   "linterOptions": {
