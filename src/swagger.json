@@ -1,21 +1,21 @@
 {
     "swagger": "2.0",
     "info": {
-        "title": "{Your project title}",
-        "description": "{Your project description}",
-        "version": "{Your project version}",
-        "termsOfService": "{Your terms of service}",
+        "title": "Simple bookkeeper API",
+        "description": "Simple bookkeeper API swagger documentation",
+        "version": "1.0.0",
+        "termsOfService": "MIT",
         "contact": {
-            "name": "{Your contact name}",
-            "url": "http://your.url/",
-            "email": "your@email.com"
+            "name": "API Service support",
+            "url": "https://butterflysolutions.co/products/simple-bookkeeper/terms/",
+            "email": "support@butterflysolutions.co"
         },
         "license": {
-            "name": "{Your license}",
-            "url": "http://license.url/"
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
         }
     },
-    "basePath": "/your/project/dev/base/path",
+    "basePath": "/uat/butterflysolutions.co/api/simple-bookkeeper-api",
     "tags": [
         {
             "name": "Persons",
