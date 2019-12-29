@@ -15,7 +15,7 @@
     "test": "jest --watchAll",
     "check": "gts check",
     "clean": "gts clean",
-    "compile": "tsc -p .",
+    "compile": "tsc -p . && cp package.json build/ && cp src/swagger.json build/",
     "fix": "gts fix",
     "prepare": "npm.cmd run compile",
     "pretest": "npm.cmd run compile",
