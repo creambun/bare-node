@@ -15,7 +15,7 @@
             "url": "http://license.url/"
         }
     },
-    "basePath": "/your/project/base/path",
+    "basePath": "/your/project/dev/base/path",
     "tags": [
         {
             "name": "Persons",
@@ -23,7 +23,7 @@
         }
     ],
     "schemes": [
-        "https"
+        "http"
     ],
     "consumes": [
         "application/json"

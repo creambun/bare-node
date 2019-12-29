@@ -15,7 +15,7 @@
             "url": "http://license.url/"
         }
     },
-    "basePath": "/your/project/base/path",
+    "basePath": "/your/project/prod/base/path",
     "tags": [
         {
             "name": "Persons",
