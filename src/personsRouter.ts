@@ -43,9 +43,7 @@ personsRouter.delete('/:id', (req: any, res: any) => {
   const id = (req.params.id || '').toLowerCase();
   const matches = persons.filter(c => c.id === id);
   if (matches.length) {
-    const match = matches[0];
-    const index = persons.indexOf(match);
-    persons = persons.splice(index);
+    persons = persons.filter(c => c.id !== id);
 
     res.status(204).send();
   } else {
