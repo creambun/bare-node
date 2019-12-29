@@ -15,7 +15,7 @@
             "url": "https://opensource.org/licenses/MIT"
         }
     },
-    "basePath": "/uat/butterflysolutions.co/api/simple-bookkeeper-api",
+    "basePath": "/",
     "tags": [
         {
             "name": "Persons",
