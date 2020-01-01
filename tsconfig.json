@@ -8,7 +8,7 @@
     "noImplicitAny": false
   },
   "include": [
-    "src/**/*.ts",
-    "test/**/*.ts"
+    "src/main/**/*.ts",
+    "src/test/**/*.ts"
   ]
 }
