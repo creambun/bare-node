@@ -1,0 +1,7 @@
+'use strict';
+
+const http = require('http');
+const httpServer = http.createServer(require('./app'));
+httpServer.listen();
+
+console.log(httpServer.address().port);
