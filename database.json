@@ -1,0 +1,31 @@
+{
+  "defaultEnv": {"ENV": "NODE_ENV"},
+  "dev": {
+    "driver": "pg",
+    "user": {"ENV": "TEST_DB_USERNAME_DEV"},
+    "password": {"ENV": "TEST_DB_PASSWORD_DEV"},
+    "host": "localhost",
+    "port": "5432",
+    "database": "test-db-dev",
+    "schema": "public"
+  },
+  "uat": {
+    "driver": "pg",
+    "user": {"ENV": "TEST_DB_USERNAME_UAT"},
+    "password": {"ENV": "TEST_DB_PASSWORD_UAT"},
+    "host": "localhost",
+    "port": "5432",
+    "database": "test-db-uat",
+    "schema": "public"
+  },
+  "prod": {
+    "driver": "pg",
+    "user": {"ENV": "TEST_DB_USERNAME_PROD"},
+    "password": {"ENV": "TEST_DB_PASSWORD_PROD"},
+    "host": "localhost",
+    "port": "5432",
+    "database": "test-db",
+    "schema": "public"
+  },
+  "sql-file": true
+}
