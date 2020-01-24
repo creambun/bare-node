@@ -21,7 +21,9 @@
     "fix": "gts fix",
     "prepare": "npm.cmd run compile",
     "pretest": "npm.cmd run compile",
-    "posttest": "npm.cmd run check"
+    "posttest": "npm.cmd run check",
+    "db-up": "db-migrate up",
+    "db-down1": "db-migrate down"
   },
   "devDependencies": {
     "@types/node": "^10.0.3",
@@ -39,6 +41,7 @@
     "ts-node": "^8.5.4",
     "typescript": "^3.7.4",
     "underscore": "^1.9.1",
-    "uuid": "^3.3.3"
+    "uuid": "^3.3.3",
+    "db-migrate-pg": "^1.0.0"
   }
 }
